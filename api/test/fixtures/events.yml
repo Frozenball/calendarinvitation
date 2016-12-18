@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ip: MyString
+  start: 2016-12-18 14:39:42
+  end: 2016-12-18 14:39:42
+
+two:
+  name: MyString
+  ip: MyString
+  start: 2016-12-18 14:39:42
+  end: 2016-12-18 14:39:42
