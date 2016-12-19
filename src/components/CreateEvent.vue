@@ -27,7 +27,7 @@
           <input class="input" type="text" v-model="eventDuration" value="" placeholder="1 hour">
         </label> -->
         <!-- <pre>{{ code }}</pre> -->
-        <button class="btn btn-large btn-default" type="submit">Create</button>
+        <button class="btn btn-lg btn-default" type="submit">Create</button>
       </form>
     </div>
   </div>
