@@ -9,6 +9,7 @@ export default new VueRouter({
   routes: [
     { name: 'index', path: '/', component: CreateEvent },
     { name: 'view', path: '/:slug', component: ViewEvent },
-    { name: '404', path: '*', component: NotFound },
+    { name: '404', path: '/404', component: NotFound },
+    { path: '*', redirect: '404' },
   ],
 });
