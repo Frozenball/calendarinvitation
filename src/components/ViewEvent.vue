@@ -3,7 +3,7 @@
     <div class="view-event" v-if="name">
       <h4>{{ name }}</h4>
       <p>{{ description }}</p>
-      <div class="datetime"><strong>When:</strong> {{ startHuman }}</div>
+      <div class="datetime"><strong>When:</strong> {{ startHumanized }}</div>
       <div class="location" v-if="location != ''"><strong>Location:</strong> {{ location }}</div>
       <div class="download">
         <a class="btn btn-default" v-on:click.prevent="download()">Download .ics</a>
@@ -23,7 +23,7 @@ import parse from 'parse-messy-time';
 import uuid from 'uuid';
 
 function toGoogleTime(x) {
-  return x.toISOString().replace(/-|:|\.\d\d\d/g,"");
+  return x.toISOString().replace(/-|:|\.\d\d\d/g, '');
 }
 
 export default {
@@ -43,7 +43,7 @@ export default {
         &sprop=name:
       `.split("\n").map(x => x.trim()).join("");
     },
-    startHuman() {
+    startHumanized() {
       return moment(this.start).format('YYYY-MM-DD, HH:mm:ss');
     },
   },
