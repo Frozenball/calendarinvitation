@@ -20,8 +20,12 @@
         </label>
         <label class="biginput">
           <div class="title">Event location</div>
-          <input class="input" type="text" v-model="eventLocation" value="" placeholder="Kamppi, Helsinki" autofocus="true">
+          <input class="input" type="text" v-model="eventLocation" value="" placeholder="Kamppi, Helsinki">
         </label>
+<!--         <label class="biginput">
+          <div class="title">Event duration</div>
+          <input class="input" type="text" v-model="eventDuration" value="" placeholder="1 hour">
+        </label> -->
         <!-- <pre>{{ code }}</pre> -->
         <button class="btn btn-large btn-default" type="submit">Create</button>
       </form>
@@ -61,6 +65,7 @@ export default {
       eventLocation: '',
       eventTime: '',
       eventDescription: '',
+      eventDuration: ''
     };
   },
   methods: {

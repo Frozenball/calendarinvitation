@@ -1,9 +1,11 @@
 <template>
-  <div class="centerstuff">
-    <div>
-        <h1>404</h1>
-        <p>Requested page was not found.</p>
-        <router-link :to="{name: 'index'}">Go back</router-link>
+  <div class="centerstuff-container">
+    <div class="centerstuff">
+        <div>
+            <h1>404</h1>
+            <p>Requested page was not found.</p>
+            <router-link :to="{name: 'index'}">Go back</router-link>
+        </div>
     </div>
   </div>
 </template>
@@ -18,6 +20,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.centerstuff-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 .centerstuff {
     background-color: rgb(192, 57, 43);
     display: flex;
