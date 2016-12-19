@@ -6,7 +6,7 @@
       <form v-on:submit.prevent="create()">
         <label class="biginput">
           <div class="title">Event name</div>
-          <input required class="input" type="text" v-model="eventName" value="" placeholder="BBQ at my place" autofocus="true">
+          <input name="eventName" required class="input" type="text" v-model="eventName" value="" placeholder="BBQ at my place" ref="name">
         </label>
         <label class="biginput">
           <div class="title">Event description</div>
@@ -57,6 +57,10 @@ export default {
       event.setDescription(this.eventDescription);
       return event.toString();
     },
+  },
+  mounted() {
+    console.log(this.$refs.name);
+    this.$refs.name.focus();
   },
   data() {
     return {
