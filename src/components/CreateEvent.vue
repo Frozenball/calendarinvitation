@@ -34,7 +34,6 @@
 </template>
 
 <script>
-/* eslint-disable import/no-extraneous-dependencies */
 import download from 'in-browser-download';
 import icalendar from 'icalendar';
 import moment from 'moment';

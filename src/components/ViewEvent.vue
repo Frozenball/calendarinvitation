@@ -22,6 +22,10 @@ import moment from 'moment';
 import parse from 'parse-messy-time';
 import uuid from 'uuid';
 
+function toGoogleTime(x) {
+  return x.toISOString().replace(/-|:|\.\d\d\d/g,"");
+}
+
 export default {
   name: 'viewEvent',
   computed: {
@@ -29,7 +33,9 @@ export default {
       return `
         http://www.google.com/calendar/event?action=TEMPLATE
         &text=${encodeURIComponent(this.name)}
-        &dates=${encodeURIComponent(this.start.toDate().toISOString().replace(/-|:|\.\d\d\d/g,""))}/${encodeURIComponent(this.end.toDate().toISOString().replace(/-|:|\.\d\d\d/g,""))}
+        &dates=
+        ${encodeURIComponent(toGoogleTime(this.start.toDate()))}/
+        ${encodeURIComponent(toGoogleTime(this.end.toDate()))}
         &details=${encodeURIComponent(this.description)}
         &location=${encodeURIComponent(this.location)}
         &trp=false

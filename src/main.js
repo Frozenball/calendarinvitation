@@ -2,13 +2,16 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueResource from 'vue-resource';
+import VueRouter from 'vue-router';
+
 import App from './App';
 import router from './router';
 
 Vue.use(VueResource);
+Vue.use(VueRouter);
 
 /* eslint-disable no-new */
-const root = new Vue({
+new Vue({
   router,
   el: '#app',
   template: '<App/>',
@@ -17,6 +20,3 @@ const root = new Vue({
     root: 'http://localhost:3000/',
   },
 });
-// document.addEventListener('DOMContentLoaded', function () {
-//   root.$mount('#app')
-// })
