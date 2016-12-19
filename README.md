@@ -1,6 +1,6 @@
 # Create Calendar Event
 
-A sample Vue.js website using Rails as a backend.
+A sample Vue.js website using Rails as a backend. View at [calendarinvitation.info](https://calendarinvitation.info).
 
 ## Build Setup
 
