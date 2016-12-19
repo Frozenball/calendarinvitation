@@ -6,7 +6,7 @@ A sample Vue.js website using Rails as a backend.
 
 ``` bash
 # Install dependencies
-npm install
+yarn install
 cd api && bundle install
 
 # Developing
